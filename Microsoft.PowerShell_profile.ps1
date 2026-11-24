@@ -81,6 +81,15 @@ function rmnote {
     Write-Host "Geloescht: $Name.txt" -ForegroundColor Green
 }
 
+function noteday {
+    param(
+        [Parameter(Mandatory)]
+        [string]$Name
+    )
+
+    note "$(Get-Date -Format 'yyyy-MM-dd')_$Name"
+}
+
 # ==========================================
 # Aliase
 # ==========================================
